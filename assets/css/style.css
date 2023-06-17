@@ -2,16 +2,6 @@
     font-family: 'SpaceMono';
     src: url('/To-do-list/assets/font/SpaceMono-Regular.ttf') format('truetype');
 }
-*{
-    border: none;
-}
-body{
-    font-family: 'SpaceMono', monospace;
-    background-color: var(--black);
-    color: var(--white);
-    border: none
-}
-
 :root{
     --black: #26282b;
     --gray: #2e3239;
@@ -23,26 +13,34 @@ body{
     --red:  #f65151;
 }
 
+*{
+    border: none;
+    box-sizing: border-box;
+    font-size: x-large;
+}
+
+body{
+    font-family: 'SpaceMono', monospace;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+}
+
 header{
     display: flex;
-    align-items: center;
     padding: 20px;
     justify-content: space-between;
     font-size: 1.9rem;
     background-color: var(--blue);
 }
 
-.new-task{
-    margin: 100px 20px;
-
-
+section{
+    margin: 5% 5% 0% 5%;
+    font-size: 1.2rem;
 }
 
-.write-new-task{
+.writesend-new-task{
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    
 }
 
 .input-task{
@@ -53,39 +51,44 @@ header{
     border-radius: 5px;
 }
 
-/* Mudar o tamanho do svg */
 .send-task{
     cursor: pointer;
-    height: 60px;
-    width: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 5px;
+    height: 45px;
+    width: 60px;
     background-color: var(--blue);
-    border-radius: 20px;
-    margin-left: 1%;
+    border-radius: 5px;
 }
 
 .send-task:hover{
     background-color: var(--light-blue);
 }
 
+.send-task img{
+    height: 30px;
+}
+
 .option-new-task{
     display: flex;
-    align-items: center;
-    gap: 75px;
+    gap: 5%;
 }
+
 .input-date{
-    font-size: 1.2rem;
+    cursor: pointer;
     font-family: 'SpaceMono';
+    font-size: 1.1rem;
     height: 40px;
     width: 150px;
     border-radius: 5px;
 }
 
 select{
-    font-size: 1.1rem;
+    cursor: pointer;
     font-family: 'SpaceMono';
+    font-size: 1.1rem;
     height: 40px;
     width: 150px;
     border-radius: 5px;
@@ -99,32 +102,180 @@ select{
     width: 150px;
 }
 
-.all-tasks{
-    margin: 5%;
-
-}
-
+/* tasks */
 .task{
-    margin-top: 15px;
     display: flex;
     align-items: center;
+    margin-top: 15px;
     height: 70px;
     width: 100%;
-    justify-content: space-around;
-    border-radius: 30px;
+    border-radius: 20px;
     color: var(--black);
     background-color: var(--light-blue);
 }
 
-.text-task, .bookmark, .date-task{
-    font-size: 1.3rem;
+.text-task{
+    position: relative;
+    width: 40%;
+    left: 5%;
+}
+
+.date-task{
+    position: relative;
+    width: 5%;
+    left: 6%;
+}
+
+.bookmark{
+    position: relative;
+    width: 7%;
+    left: 10%;
+}
+
+.low, .medium, .high{
+    position: relative;
+    cursor: pointer;
+}
+
+.low:before, .medium:before, .high:before{
+    content: "";
+    position: relative;
+    bottom: 10px;
+    right: 5px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:var(--white);
+}
+
+.low:checked:before, .medium:checked:before, .high:checked:before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: var(--white) solid 3px
+}
+
+.low:before{
+    border: var(--green) solid 3px;
+}
+
+.low:checked:before{
+    background-color: var(--green);
+}
+
+.medium:before{
+    border: var(--yellow) solid 3px;
+}
+
+.medium:checked:before{
+    background-color: var(--yellow);
+}
+.high:before{
+    border: var(--red) solid 3px;
+}
+
+.high:checked:before{
+    background-color: var(--red);
 }
 
 .priority{
+    position: relative;
+    left: 17%;
     height: 25px;
     width: 25px;
-    border: var(--black) solid;
-    background-color: var(--green);
     border-radius: 50%;
+    border: var(--black) solid;
 }
 
+.p-low{
+    background-color: var(--green);
+}
+
+.p-medium{
+    background-color: var(--yellow);
+}
+
+.p-high{
+    background-color: var(--red);
+}
+
+.edit img, .delet img{
+    cursor: pointer;
+    height: 30px;
+}
+
+.edit, .delet{
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--light-blue);
+}
+
+.edit:hover, .delet:hover{
+    background-color: var(--blue);
+}
+
+.edit{
+    left: 25%;
+}
+
+.delet{
+    left: 30%;
+}
+
+.task input[type="checkbox"]{
+    cursor: pointer;
+    position: relative;
+    left: 2%;
+    bottom: 5px;
+}
+
+.task input[type="checkbox"]:before{
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color:var(--white);
+    border: var(--black) solid 1px
+}
+.task input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: var(--green);
+    border: var(--black) solid 1px
+}
+.task input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 15px;
+    border: var(--black) solid;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 9px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+    gap: 3px;
+}
+
+footer a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: var(--light-blue);
+}
