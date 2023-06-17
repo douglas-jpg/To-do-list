@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'SpaceMono';
+    src: url('/To-do-list/assets/font/SpaceMono-Regular.ttf') format('truetype');
+}
+*{
+    border: none;
+}
+body{
+    font-family: 'SpaceMono', monospace;
+    background-color: var(--black);
+    color: var(--white);
+    border: none
+}
+
+:root{
+    --black: #26282b;
+    --gray: #2e3239;
+    --blue: #5f7adb;
+    --light-blue: #a2b2ee;
+    --white: #f7f7f7;
+    --green: #7adb5f;
+    --yellow: #faf57a;
+    --red:  #f65151;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    font-size: 1.9rem;
+    background-color: var(--blue);
+}
+
+.new-task{
+    margin: 100px 20px;
+
+
+}
+
+.write-new-task{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+.input-task{
+    font-family: 'SpaceMono';
+    font-size: 1.1rem;
+    height: 40px;
+    width: 75%;
+    border-radius: 5px;
+}
+
+/* Mudar o tamanho do svg */
+.send-task{
+    cursor: pointer;
+    height: 60px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    border-radius: 20px;
+    margin-left: 1%;
+}
+
+.send-task:hover{
+    background-color: var(--light-blue);
+}
+
+.option-new-task{
+    display: flex;
+    align-items: center;
+    gap: 75px;
+}
+.input-date{
+    font-size: 1.2rem;
+    font-family: 'SpaceMono';
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+select{
+    font-size: 1.1rem;
+    font-family: 'SpaceMono';
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.select-priority{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+}
+
+.all-tasks{
+    margin: 5%;
+
+}
+
+.task{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    justify-content: space-around;
+    border-radius: 30px;
+    color: var(--black);
+    background-color: var(--light-blue);
+}
+
+.text-task, .bookmark, .date-task{
+    font-size: 1.3rem;
+}
+
+.priority{
+    height: 25px;
+    width: 25px;
+    border: var(--black) solid;
+    background-color: var(--green);
+    border-radius: 50%;
+}
+

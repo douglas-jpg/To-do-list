@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <script defer src="js/script.js"></script>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+        <link rel="manifest" href="assets/img/favicon.ico">
+        
+        <title>To do list</title>
+
+    </head>
+    <body>
+        <main>
+            <header>
+                <div class="title">
+                    <h1>My to do list</h1>
+                </div>
+                <time datetime="2023-06-16">16/06</time>
+            </header>
+        
+            <section class="new-task">
+                <div class="write-new-task">
+                    <input type="text" placeholder="Write your task here..." class="input-task">
+                    <!--Mudar o tamanho do arquivo .svg-->
+                    <button class="send-task"><img src="assets/svg/send.svg" alt=""></button>
+                </div>
+                <div class="option-new-task">
+                    <input type="date" name="date" class="input-date">
+                    <select>
+                        <option value="home">Home</option>
+                        <option value="school">Faculty</option>
+                        <option value="work">Work</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="select-priority">
+                        <input type="checkbox" class="all-priority">
+                        <input type="checkbox" class="all-priority">
+                        <input type="checkbox" class="all-priority">
+                    </div>
+                    
+                </div>
+                
+
+            </section>
+
+            <section class="all-tasks">
+                <div class="task">
+                    <input type="checkbox">
+                    <div class="text-task">Make a site for to do list</div>
+                    <div class="date-task">13/05</div>
+                    <div class="bookmark">Home</div>
+                    <div class="priority"></div>
+                    <button class="edit">edit</button>
+                    <button class="delet">delet</button>
+                </div>
+                <div class="task">
+                    <input type="checkbox">
+                    <div class="text-task">Lorem ipsum dolor</div>
+                    <div class="date-task">13/05</div>
+                    <div class="bookmark">Home</div>
+                    <div class="priority"></div>
+                    <button class="edit">edit</button>
+                    <button class="delet">delet</button>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
