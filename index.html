@@ -18,14 +18,13 @@
         <title>To do list</title>
     </head>
     <body>
+        <header>
+            <div class="title">
+                <h1>My to do list</h1>
+            </div>
+            <h2 class="new-date"></h2>
+        </header>
         <main>
-            <header>
-                <div class="title">
-                    <h1>My to do list</h1>
-                </div>
-                <time datetime="2023-06-16">16/06</time>
-            </header>
-        
             <section class="new-task">
                 <div class="writesend-new-task">
                     <input type="text" placeholder="Write your task here..." class="input-task">
@@ -33,11 +32,11 @@
                 </div>
                 <div class="option-new-task">
                     <input type="date" name="date" class="input-date">
-                    <select>
-                        <option value="home">Home</option>
-                        <option value="school">Faculty</option>
-                        <option value="work">Work</option>
-                        <option value="other">Other</option>
+                    <select class="tag">
+                        <option value="Home">Home</option>
+                        <option value="School">Faculty</option>
+                        <option value="Work">Work</option>
+                        <option value="Other">Other</option>
                     </select>
                     <div class="select-priority">
                         <input type="checkbox" class="high">
@@ -48,42 +47,6 @@
             </section>
 
             <section class="all-tasks">
-                <div class="task">
-                    <input type="checkbox">
-                    <div class="text-task">Lorem ipsum dolor</div>
-                    <div class="date-task">30/05</div>
-                    <div class="bookmark">Home</div>
-                    <div class="priority p-low"></div>
-                    <button class="edit"><img src="assets/svg/edit.svg" alt="button to edit"></button>
-                    <button class="delet"><img src="assets/svg/trash-2.svg" alt="button to delet"></button>
-                </div>
-                <div class="task">
-                    <input type="checkbox">
-                    <div class="text-task">Lorem ipsum dolor</div>
-                    <div class="date-task">13/05</div>
-                    <div class="bookmark">Faculty</div>
-                    <div class="priority p-low"></div>
-                    <button class="edit"><img src="assets/svg/edit.svg" alt="button to edit"></button>
-                    <button class="delet"><img src="assets/svg/trash-2.svg" alt="button to delet"></button>
-                </div>
-                <div class="task">
-                    <input type="checkbox">
-                    <div class="text-task">Lorem ipsum dolor</div>
-                    <div class="date-task">13/05</div>
-                    <div class="bookmark">Work</div>
-                    <div class="priority p-medium"></div>
-                    <button class="edit"><img src="assets/svg/edit.svg" alt="button to edit"></button>
-                    <button class="delet"><img src="assets/svg/trash-2.svg" alt="button to delet"></button>
-                </div>
-                <div class="task">
-                    <input type="checkbox">
-                    <div class="text-task">Lorem ipsum dolor</div>
-                    <div class="date-task">13/05</div>
-                    <div class="bookmark">Other</div>
-                    <div class="priority p-medium"></div>
-                    <button class="edit"><img src="assets/svg/edit.svg" alt="button to edit"></button>
-                    <button class="delet"><img src="assets/svg/trash-2.svg" alt="button to delet"></button>
-                </div>
                 <div class="task">
                     <input type="checkbox">
                     <div class="text-task">Lorem ipsum dolor</div>
@@ -99,5 +62,6 @@
             <a href="https://github.com/douglas-jpg"><img src="assets/svg/github.svg" alt="">douglas-jpg</a>
             <p>Create by Douglas - v1.0.0</p>
         </footer>
+        <a href=""></a>
     </body>
 </html>
